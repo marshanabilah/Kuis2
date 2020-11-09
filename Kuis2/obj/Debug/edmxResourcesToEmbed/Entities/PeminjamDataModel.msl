@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PeminjamModelStoreContainer" CdmEntityContainer="Peminjam1Entities">
+    <EntitySetMapping Name="Peminjam">
+      <EntityTypeMapping TypeName="PeminjamModel.Peminjam">
+        <MappingFragment StoreEntitySet="Peminjam">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="nama" ColumnName="nama" />
+          <ScalarProperty Name="telp" ColumnName="telp" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="alamat" ColumnName="alamat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

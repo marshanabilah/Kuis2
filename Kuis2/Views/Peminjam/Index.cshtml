@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Kuis2.Entities.Peminjam>
+
+@{
+    ViewBag.Title = "Daftar Peminjam";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alamat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.username)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.nama)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.telp)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.alamat)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { code = item.id }) |
+        @Html.ActionLink("Details", "Details", new { code = item.id }) |
+        @Html.ActionLink("Delete", "Delete", new { code = item.id })
+    </td>
+</tr>
+}
+
+</table>
