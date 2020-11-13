@@ -170,9 +170,28 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BukuController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PeminjamController.cs" />
+    <Compile Include="Entities\buku.cs">
+      <DependentUpon>BukuDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BukuDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BukuDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BukuDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BukuDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BukuDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BukuDataModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Peminjam.cs">
       <DependentUpon>PeminjamDataModel.tt</DependentUpon>
     </Compile>
@@ -205,6 +224,16 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Entities\BukuDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BukuDataModel.edmx</DependentUpon>
+      <LastGenOutput>BukuDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\BukuDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BukuDataModel.edmx</DependentUpon>
+      <LastGenOutput>BukuDataModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Entities\PeminjamDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>PeminjamDataModel.edmx</DependentUpon>
@@ -227,6 +256,13 @@
     </EntityDeploy>
     <Content Include="Entities\PeminjamDataModel.edmx.diagram">
       <DependentUpon>PeminjamDataModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Entities\BukuDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BukuDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entities\BukuDataModel.edmx.diagram">
+      <DependentUpon>BukuDataModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -278,6 +314,8 @@
     <Content Include="Views\Peminjam\Details.cshtml" />
     <Content Include="Views\Peminjam\Edit.cshtml" />
     <Content Include="Views\Peminjam\Delete.cshtml" />
+    <Content Include="Views\Buku\Index.cshtml" />
+    <Content Include="Views\Buku\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
