@@ -316,6 +316,7 @@
     <Content Include="Views\Peminjam\Delete.cshtml" />
     <Content Include="Views\Buku\Index.cshtml" />
     <Content Include="Views\Buku\Create.cshtml" />
+    <Content Include="Views\Buku\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

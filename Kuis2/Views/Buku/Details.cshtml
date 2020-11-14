@@ -1,0 +1,57 @@
+﻿@model Kuis2.Entities.buku
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>buku</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.judul)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.judul)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.penulis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.penulis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tahun_terbit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tahun_terbit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kategori)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kategori)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { code = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
