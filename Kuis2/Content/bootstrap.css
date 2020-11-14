@@ -37,6 +37,11 @@ body {
 .log {
     padding-top: 40px;
 }
+.home {
+    margin-left: 18px;
+    width: 40%;
+    height: 130px;
+}
 
 article,
 aside,
